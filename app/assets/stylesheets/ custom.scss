@@ -1,0 +1,92 @@
+
+// About
+#carouselLendingSlide {
+    padding-top: 48px;
+}
+
+.carousel-item img{
+    width: 100%;
+}
+
+.carousel-caption h1 {
+    font-size: 75px;
+    margin-bottom: 30px;
+}
+
+.carousel-caption p {
+    font-size: 22px;
+}
+
+.carousel-caption {
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
+
+.we-do {
+    padding: 100px 0;
+}
+
+.we-do p {
+    font-weight: lighter;
+}
+
+.we-do-details {
+    padding-top: 60px;
+}
+
+.we-do-description {
+    transition: 0.5s;
+}
+
+.we-do-description:hover {
+    box-shadow: 0 5px 20px rgba(112,134,230,.4);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.about-us {
+    background-color: #f1f1f1;
+    padding: 100px 0;
+    text-align: justify;
+}
+
+.about-us-description {
+    padding-right: 30px;
+}
+
+    // This style block need for verticle responsive centering of image: https://stackoverflow.com/a/18516474/9295723, http://jsfiddle.net/hashem/46psK/3/
+    .about-us img {
+        width: 100%;
+    }
+
+    .responsive-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .dummy {
+        padding-top: 100%; /* forces 1:1 aspect ratio */
+    }
+
+    .img-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        text-align:center; /* Align center inline elements */
+        font: 0/0 a;
+    }
+
+    .img-container:before {
+        content: ' ';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+
+    .img-container img {
+        vertical-align: middle;
+        display: inline-block;
+        box-shadow: 0 5px 20px rgba(112,134,230,.4);
+    }

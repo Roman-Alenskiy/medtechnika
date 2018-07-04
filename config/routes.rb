@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  #Root
+  root 'static_pages#about'
+  #Static pages
+  get '/contacts',    to: 'static_pages#contacts'
+  get '/about',   to: 'static_pages#about'
+  get '/history', to: 'static_pages#history'
 end
