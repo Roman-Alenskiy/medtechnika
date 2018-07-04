@@ -1,4 +1,6 @@
-// General
+/* 
+* General
+*/
 html, body {
     height: 100%;
   }
@@ -11,7 +13,9 @@ html, body {
     color: #a91131;
 }
 
-// Header
+/* 
+* Header
+*/
 .logo {
     height: 30px;
     width: 30px;
@@ -46,7 +50,9 @@ html, body {
     transition: 0.5s;
 }
 
-// About
+/* 
+* About
+*/
 #carouselLendingSlide {
     padding-top: 48px;
 }
@@ -137,3 +143,13 @@ html, body {
         display: inline-block;
         box-shadow: 0 5px 20px rgba(112,134,230,.4);
     }
+
+/* 
+* Footer
+*/
+
+footer {
+    background-color: #a91131;
+    color: white;
+    padding-top: 16px;
+}
