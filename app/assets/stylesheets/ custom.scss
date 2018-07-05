@@ -9,20 +9,12 @@ html, body {
     font-weight: 600;
 }
 
-.about .btn {
-    color: #a91131;
-}
-
 /* 
 * Header
 */
 .company-logo {
     height: 30px;
     width: 30px;
-}
-
-.navbar {
-    background-color: #a91131;
 }
 
 .navbar-brand {
@@ -33,21 +25,45 @@ html, body {
     color:white;
 }
 
-.nav-link {
-    color: rgba(255, 255, 255, 0.8);
+.navbar-2{
+    background-color: #a91131;
+    .nav-link {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .nav-link:hover {
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .nav-item {
+        transition: 0.5s;
+    }
+    
+    .nav-item:hover {
+        background-color: rgba(0, 0, 0, 0.219);
+        transition: 0.5s;
+    }
 }
 
-.nav-link:hover {
-    color: rgba(255, 255, 255, 0.9);
-}
+.navbar-1 {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.6);
 
-.nav-item {
-    transition: 0.5s;
-}
+    nav {
+        padding-top: 55px;
+    }
 
-.nav-item:hover {
-    background-color: rgba(0, 0, 0, 0.219);
-    transition: 0.5s;
+    a {
+        color: rgba(0, 0, 0, 0.6);
+        transition: 0.5s;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #a91131;
+        transition: 0.5s;
+    }
+
 }
 
 /* 
@@ -69,8 +85,9 @@ footer {
 /* 
 * About
 */
-.about {
-    padding-top: 45px;
+
+.about .btn {
+    color: #a91131;
 }
 
 .carousel-item img{
@@ -166,7 +183,7 @@ footer {
 */
 
 .history {
-    padding-top: 90px;
+    padding-top: 70px;
     text-align: justify;    
 }
 
