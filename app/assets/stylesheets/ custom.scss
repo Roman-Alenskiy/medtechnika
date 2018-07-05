@@ -16,7 +16,7 @@ html, body {
 /* 
 * Header
 */
-.logo {
+.company-logo {
     height: 30px;
     width: 30px;
 }
@@ -152,4 +152,12 @@ footer {
     background-color: #a91131;
     color: white;
     padding-top: 16px;
+}
+
+.social {
+    padding-bottom: 10px;
+    text-align: right;
+    margin-bottom: 16px;
+
+    
 }
