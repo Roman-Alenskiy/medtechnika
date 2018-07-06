@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MT</title>
+    <title>Медтехника</title>
+    <%= favicon_link_tag 'MT_logo.png' %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script type="text/javascript">
+      $(document).bind('turbolinks:load', function() {
         ymaps.ready(function(){
             // Указывается идентификатор HTML-элемента.
             var mtMap = new ymaps.Map("map", {
@@ -25,6 +27,7 @@
           });
           mtMap.geoObjects.add(mtPlacemark);
         });
+      });
   </script>
   </head>
 
