@@ -23,12 +23,12 @@
     <nav class="navbar navbar-2 fixed-top navbar-expand-sm py-0">
         
         <ul class="navbar-nav container d-flex flex-column flex-md-row  justify-content-between">
-            <a href="#" class="navbar-brand">
+            <%= link_to root_path, class: "navbar-brand" do %>
                 <%= image_tag("MT_logo.png", alt: "Logo", class: "d-inline-block align-top company-logo") %>
                 Медтехника
-            </a>
+            <% end %>
             <li class="nav-item py-1">
-                <a href="#" class="nav-link">О компании</a>
+                <%= link_to "О компании", about_path, class: "nav-link" %>
             </li>
             <li class="nav-item py-1">
                 <a href="#" class="nav-link">Услуги</a>
@@ -40,10 +40,10 @@
                 <a href="#" class="nav-link">Online-заявка</a>
             </li>
             <li class="nav-item py-1">
-                <a href="#" class="nav-link">История</a>
+                <%= link_to "История", history_path, class: "nav-link" %>
             </li>
             <li class="nav-item py-1">
-                <a href="#" class="nav-link">Контакты</a>
+                <%= link_to "Контакты", contacts_path, class: "nav-link" %>
             </li>
         </ul>
     </nav>

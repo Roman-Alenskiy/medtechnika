@@ -4,10 +4,14 @@
         <div class="carousel-item active">
             <%= image_tag("lending.jpg", alt: "Lending", class: "lending d-block") %>
             <div class="carousel-caption d-none d-md-block" style="padding-bottom: 200px">
-                <p>Добро пожаловать в нашу компанию!</p>
-                <h1>Медтехника</h1>
-                <button type="button" class="btn btn-light">Продукция</button>
-                <button type="button" class="btn btn-light">Свяжитесь с нами!</button>
+                <div class="caption">
+                    <p>Добро пожаловать в нашу компанию!</p>
+                    <h1>Медтехника</h1>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="btn btn-light">Продукция</button>
+                    <%= link_to "Свяжитесь с нами!", contacts_path, class: "btn btn-light" %>
+                </div>
             </div>
         </div>
       </div>
