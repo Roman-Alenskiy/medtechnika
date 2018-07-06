@@ -6,6 +6,26 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(function(){
+            // Указывается идентификатор HTML-элемента.
+            var mtMap = new ymaps.Map("map", {
+                center: [61.77504027172838, 34.33291325487779],
+                zoom: 16
+            },  {
+                searchControlProvider: 'yandex#search'
+              }),
+
+            mtPlacemark = new ymaps.Placemark([61.77504027172838, 34.33291325487779], {
+              // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+              balloonContentHeader: "ГУП РК Медтехника",
+              balloonContentBody: "ул. Пирогова, д. 6А",
+              balloonContentFooter: "185002, РК, г. Петрозаводск",
+          });
+          mtMap.geoObjects.add(mtPlacemark);
+        });
+  </script>
   </head>
 
   <body>
