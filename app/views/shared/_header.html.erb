@@ -36,8 +36,16 @@
             <li class="nav-item py-1">
                 <a href="#" class="nav-link">Услуги</a>
             </li>
-            <li class="nav-item py-1">
-                <a href="#" class="nav-link">Продукция</a>
+            <li class="nav-item dropdown py-1">
+                <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Продукция
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    
+                    
+                </div>
             </li>
             <li class="nav-item py-1">
                 <a href="#" class="nav-link">Online-заявка</a>
@@ -45,6 +53,7 @@
             <li class="nav-item py-1">
                 <%= link_to "История компании", history_path, class: "nav-link" %>
             </li>
+            
         </ul>
     </nav>
 </header>
