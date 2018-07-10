@@ -14,6 +14,9 @@ gem 'sqlite3'
 gem 'puma', '~> 3.7'
 # Use bootstrap and sass for front-end
 gem 'bootstrap', '~> 4.1.1'
+# For image uploads
+gem 'carrierwave', '~> 1.2.3'
+gem 'mini_magick', '~> 4.8.0'
 # jQuery for bootstrap
 gem 'jquery-rails', '~> 4.3.3'
 # Sprockets implementation for rails
@@ -54,6 +57,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production do
+  gem 'pg',  '~> 1.0.0'
+  gem 'fog', '~> 2.0.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
