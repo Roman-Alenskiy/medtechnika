@@ -1,4 +1,12 @@
-<% @products.each do |product| %>
-    <%= link_to product.name, product %><br>
-    <%= product.price %><br><br>
-<% end %>
+<main class="category">
+    <div class="container">
+            <div class="row">
+                <div class="col-md-12 topic">
+                    <h1><%= @category.name %></h1>
+                </div>
+            </div>
+        <div class="row">
+            <%= render @products %>
+        </div>
+    </div>  
+</main>

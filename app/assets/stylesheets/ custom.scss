@@ -126,7 +126,7 @@ footer {
 }
 
 .we-do-description:hover {
-    box-shadow: 0 5px 20px rgba(112,134,230,.4);
+    box-shadow: 0 5px 20px rgba(79, 93, 155, 0.4);
     opacity: 1;
     transition: 0.5s;
 }
@@ -249,4 +249,47 @@ footer {
 #map {
     width: 100%;
     height: 475px;
+}
+
+/*
+* Categories
+*/
+
+.category {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.card {
+    transition: 0.5s;
+
+    a {
+        color: #212529;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #d81640;
+        transition: 0.3s;
+    }
+    
+    img {
+        width: 100%;
+    }
+}
+
+.card:hover {
+    box-shadow: 0 5px 20px rgba(79, 93, 155, 0.2);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.product-card {
+    margin-bottom: 20px;
+}
+
+.product-card-picture-container {
+    height: 310px;
+    padding: 5px;
 }

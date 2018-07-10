@@ -1,0 +1,24 @@
+<div class="col-md-4 product-card">
+    <div class="card">
+        <%= link_to product do %>
+            <div class="product-card-picture-container">
+                <% if product.picture? %>
+                    <%= image_tag product.picture.url, class: "card-img-top", alt: product.name[0..50] + "..." %>
+                <% else %>
+                    <%= image_tag("nopicture.jpg") %>
+                <% end %>
+            </div>
+        <% end %>
+        <div class="card-body">
+            <p class="card-text"><small class="text-muted"><%= product.category.name %></small></p>
+            <p class="card-title">
+                <% if product.name.size > 50 %>
+                    <%= link_to product.name[0..60] + "...", product %>
+                <% else %>
+                    <%= link_to product.name, product %>
+                <% end %>
+            </p>
+            <h5 class="card-text"><strong><%= product.price %> руб.</strong></h5>
+        </div>
+    </div>
+</div>
