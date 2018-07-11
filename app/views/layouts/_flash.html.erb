@@ -1,0 +1,10 @@
+<div class="container flash">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <% flash.each do |message_type, message| %>
+                <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+            <% end %>
+        </div>
+    </div>
+</div>
