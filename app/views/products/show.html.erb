@@ -1,4 +1,36 @@
-<%= @product.category.name %> <br><br>
-<%= @product.name %><br>
-<%= @product.description %><br><br>
-<%= @product.price %> руб.
+<main class="product">
+    <section class="product-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="product-picture-container">
+                        <% if @product.picture? %>
+                            <%= image_tag @product.picture.url, class: "", alt: @product.name[0..50] + "..." %>
+                        <% else %>
+                            <%= image_tag("nopicture.jpg") %>
+                        <% end %>
+                    </div>
+                </div>
+    
+                <div class="col-md-7">
+                    <h3 class="product-name"><%= @product.name %></h3>
+                    <h4 class="product-price"><%= @product.price %> руб.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-description">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center product-description-topic">Описание товара</h2>
+                    <%= @product.description.html_safe %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
