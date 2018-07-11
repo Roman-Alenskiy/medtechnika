@@ -41,9 +41,18 @@
                     Продукция
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <% @categories.each do |category| %>
-                        <%= link_to category.name, category, class: "dropdown-item" %>
-                    <% end %> 
+                    <div class="row">
+                        <col-md-6>
+                            <% @categories_first_h.each do |category| %>
+                                <%= link_to category.name, category, class: "dropdown-item" %>
+                            <% end %> 
+                        </col-md-6>
+                        <col-md-6>
+                            <% @categories_second_h.each do |category| %>
+                                <%= link_to category.name, category, class: "dropdown-item" %>
+                            <% end %> 
+                        </col-md-6>
+                    </div>
                 </div>
             </li>
             <li class="nav-item py-1">
@@ -51,6 +60,9 @@
             </li>
             <li class="nav-item py-1">
                 <%= link_to "История компании", history_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item py-1">
+                <%= link_to "Панель управления", manager_path, class: "nav-link" %>
             </li>
             
         </ul>

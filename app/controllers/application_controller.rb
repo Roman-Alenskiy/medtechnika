@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   private
 
     def get_categories
-      @categories = Category.all
+      @categories_first_h = Category.first(Category.count / 2 + 1)
+      @categories_second_h = Category.offset(Category.count / 2 + 1)
     end
 end
