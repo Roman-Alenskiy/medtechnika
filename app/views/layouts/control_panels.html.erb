@@ -14,7 +14,12 @@
   <body class="fixed-nav sticky-footer bg-dark" id="page-top">
     <%= render 'navbar' %>
   
-    <%= yield %>
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <%= render 'breadcrumb' %>
+        <%= yield %>
+      </div>
+    </div>
 
     <%= render 'footer' %>
 
