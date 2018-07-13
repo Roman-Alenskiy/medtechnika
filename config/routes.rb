@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   #Products
   resources :products
   #Control panels
-  get '/manager', to: 'control_panels#about_console'
+  get '/manager', to: 'control_panels#about_panel'
   get '/manager/products', to: 'control_panels#products'
   get '/manager/categories', to: 'control_panels#categories'
 

@@ -6,9 +6,11 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <!-- Custom styles for this template-->
+    <!-- Custom styles for this layout-->
     <%= stylesheet_link_tag "sb-admin", 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Custom scripts for all pages-->
+    <%= javascript_include_tag 'sb-admin', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -23,7 +25,7 @@
 
     <%= render 'footer' %>
 
-    <!-- Custom scripts for all pages-->
-    <%= javascript_include_tag 'sb-admin', 'data-turbolinks-track': 'reload' %>
+    <%= render 'logout' %>
+
   </body>
 </html>

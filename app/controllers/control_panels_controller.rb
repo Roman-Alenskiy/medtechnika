@@ -1,6 +1,6 @@
 class ControlPanelsController < ApplicationController
     
-    def about_console
+    def about_panel
     end
 
     def products
