@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
 
-    layout "control_panels", :only => [ :edit ]
+    layout "control_panels", :only => [ :edit, :create ]
     
     def new
         @category = Category.new
@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
         else 
             flash.now[:danger] = "Неккоректное заполнение полей!"
             @categories = Category.all # this need for correct render after fail category creation
-            render layout: 'control_panels', template: 'control_panels/categories'
+            render template: 'control_panels/categories'
         end
     end
 
@@ -43,7 +43,7 @@ class CategoriesController < ApplicationController
 
     def show 
         @category = Category.find(params[:id])
-        @products = @category.products
+        @products = @category.products.order(updated_at: :desc)
     end  
     
     private
