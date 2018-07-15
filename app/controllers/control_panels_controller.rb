@@ -7,6 +7,8 @@ class ControlPanelsController < ApplicationController
     end
 
     def categories
+        @category = Category.new
+        @categories = Category.all
     end
 
 end

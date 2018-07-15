@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get '/about',   to: 'static_pages#about'
   get '/history', to: 'static_pages#history'
   #Categories
-  resources :categories
+  get '/categories/new', to: redirect('/manager/categories')
+  resources :categories, only: [:show, :create, :edit, :update, :destroy]
   #Products
   resources :products
   #Control panels

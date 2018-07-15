@@ -489,3 +489,16 @@ footer.sticky-footer {
   border-bottom: solid 1px #d4d1d1;
   padding-bottom: 10px;
 }
+
+.panel-content {
+  a {
+    color: #0073aa;
+    transition: 0.2s;
+  }
+
+  a:hover {
+    color: #00a1f1;
+    transition: 0.2s;
+    text-decoration: none;
+  }
+}

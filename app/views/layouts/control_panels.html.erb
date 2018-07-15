@@ -14,18 +14,19 @@
   </head>
 
   <body class="fixed-nav sticky-footer bg-dark" id="page-top">
-    <%= render 'navbar' %>
+    <%= render 'control_panels/navbar' %>
   
-    <div class="content-wrapper">
+    <div class="content-wrapper panel-content">
       <div class="container-fluid">
-        <%= render 'breadcrumb' %>
+        <%= render 'control_panels/breadcrumb' %>
+        <%= render 'layouts/flash' if flash.any? %>
         <%= yield %>
       </div>
     </div>
 
-    <%= render 'footer' %>
+    <%= render 'control_panels/footer' %>
 
-    <%= render 'logout' %>
+    <%= render 'control_panels/logout' %>
 
   </body>
 </html>
