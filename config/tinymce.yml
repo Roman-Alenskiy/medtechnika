@@ -1,0 +1,10 @@
+toolbar:
+  - undo redo | bold italic underline | fontsizeselect | bullist numlist | blockquote hr | alignleft aligncenter alignright alignjustify |
+  - link table | removeformat | charmap
+plugins:
+  - link
+  - lists 
+  - advlist
+  - code
+  - charmap
+  - table

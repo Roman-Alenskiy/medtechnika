@@ -4,6 +4,11 @@ class ControlPanelsController < ApplicationController
     end
 
     def products
+        @products = Product.all
+    end
+
+    def products_new
+        @product = Product.new
     end
 
     def categories

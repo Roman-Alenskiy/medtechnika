@@ -13,10 +13,10 @@ class ProductsController < ApplicationController
         @product = Product.new(product_params)
         if @product.save
             flash[:success] = "Продукт успешно создан!"
-            redirect_to new_product_path
+            redirect_to manager_products_new_path
         else
             flash.now[:danger] = "Неккоректное заполнение полей!"
-            render 'new'
+            render layout: 'control_panels', template: 'control_panels/products_new'
         end
         
     end

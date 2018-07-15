@@ -1,0 +1,56 @@
+<%= form_for(@product) do |f| %>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <%= f.label :category_id, "Категория:" %>
+                <%= f.collection_select(:category_id, @categories_first_h + @categories_second_h, :id, :name, {:prompt => "Выбрать категорию..."}, {:class => 'form-control'}) %>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <%= f.label :name, "Наименование:" %>
+                <%= f.text_field :name, class: 'form-control' %>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10">
+            <div class="form-group">
+                <%= f.label :description, "Описание:" %>
+                <%= f.text_area :description, class: 'tinymce form-control', rows: 20, cols: 120 %>
+                <%= tinymce :language => "ru"%>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            <%= f.label :price, "Цена:" %>
+            <div class="input-group">
+                <%= f.number_field :price, class: 'form-control' %>
+                <div class="input-group-append">
+                    <span class="input-group-text">₽</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col">
+            <div class="form-group">
+                <%= f.label :picture, "Изображение:" %>
+                <%= f.file_field :picture, class: 'form-control-file' %>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <%= f.submit "Сохранить", class: "btn btn-primary" %>
+        </div>
+    </div>
+<% end %>

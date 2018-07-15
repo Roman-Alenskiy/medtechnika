@@ -9,10 +9,11 @@ Rails.application.routes.draw do
   get '/categories/new', to: redirect('/manager/categories')
   resources :categories, only: [:show, :create, :edit, :update, :destroy]
   #Products
+  get '/products/new', to: redirect('/manager/products/new')
   resources :products
   #Control panels
   get '/manager', to: 'control_panels#about_panel'
   get '/manager/products', to: 'control_panels#products'
+  get '/manager/products/new', to: 'control_panels#products_new'
   get '/manager/categories', to: 'control_panels#categories'
-
 end

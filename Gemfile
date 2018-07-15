@@ -17,6 +17,9 @@ gem 'bootstrap', '~> 4.1.1'
 # For image uploads
 gem 'carrierwave', '~> 1.2.3'
 gem 'mini_magick', '~> 4.8.0'
+# WYSIWYG editor
+gem 'tinymce-rails', '~> 4.7'
+gem 'tinymce-rails-langs'
 # jQuery for bootstrap
 gem 'jquery-rails', '~> 4.3.3'
 # Sprockets implementation for rails
