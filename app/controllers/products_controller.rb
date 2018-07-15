@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
 
+    layout "control_panels", :only => [ :edit, :create, :update ]
+
     def show 
         @product = Product.find(params[:id])
     end
@@ -16,7 +18,7 @@ class ProductsController < ApplicationController
             redirect_to manager_products_new_path
         else
             flash.now[:danger] = "Неккоректное заполнение полей!"
-            render layout: 'control_panels', template: 'control_panels/products_new'
+            render template: 'control_panels/products_new'
         end
         
     end
@@ -30,10 +32,18 @@ class ProductsController < ApplicationController
         @product = Product.find(params[:id])
         if @product.update_attributes(product_params)
             flash[:success] = "Товар изменен!"
-            redirect_to @product
+            redirect_to manager_products_path
         else
-            render 'edit'
+            flash.now[:danger] = "Неккоректное заполнение полей!"
+            render template: 'control_panels/products_edit'
         end
+        
+    end
+
+    def destroy
+        Product.find(params[:id]).destroy
+        flash[:success] = "Товар успешно удален!"
+        redirect_to manager_products_path
     end
 
     private

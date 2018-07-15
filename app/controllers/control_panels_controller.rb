@@ -4,11 +4,15 @@ class ControlPanelsController < ApplicationController
     end
 
     def products
-        @products = Product.all
+        @products = Product.order(category_id: :asc, name: :asc)
     end
 
     def products_new
         @product = Product.new
+    end
+
+    def products_edit
+        @product = Product.find(params[:id])
     end
 
     def categories

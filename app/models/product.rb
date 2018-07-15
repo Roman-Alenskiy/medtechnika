@@ -1,6 +1,5 @@
 class Product < ApplicationRecord
     belongs_to :category
-    default_scope -> { order(created_at: :desc) }
     mount_uploader :picture, PictureUploader
     validates :category_id, presence: true
     validates :name, presence: true
