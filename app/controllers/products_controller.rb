@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
     end
 
     def create
-        product_params[:description].gsub!(/font-family.+?;|color.+?;/, "") # font-family and color reset
+        description_cleaner
         @product = Product.new(product_params)
         if @product.save
             flash[:success] = "Продукт успешно создан!"
@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
     end
 
     def update 
-        product_params[:description].gsub!(/font-family.+?;|color.+?;/, "") # font-family and color reset
+        description_cleaner
         @product = Product.find(params[:id])
         if @product.update_attributes(product_params)
             flash[:success] = "Товар изменен!"
@@ -40,5 +40,9 @@ class ProductsController < ApplicationController
 
         def product_params
             params.require(:product).permit(:name, :description, :price, :category_id, :picture)
+        end
+
+        def description_cleaner
+            product_params[:description].gsub!(/font-family.+?;|color.+?;/, "") # font-family and color reset
         end
 end
