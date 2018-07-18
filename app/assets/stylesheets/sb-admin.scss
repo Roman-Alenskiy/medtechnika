@@ -1,3 +1,6 @@
+@import "custom-variables";
+@import "bootstrap";
+
 html {
   position: relative;
   min-height: 100%;
@@ -470,13 +473,13 @@ footer.sticky-footer {
 }
 
 @media (min-width: 992px) {
-  footer.sticky-footer {
+  footer.sticky-footer-nav {
     width: calc(100% - 250px);
   }
 }
 
 @media (min-width: 992px) {
-  body.sidenav-toggled footer.sticky-footer {
+  body.sidenav-toggled footer.sticky-footer-nav {
     width: calc(100% - 55px);
   }
 }

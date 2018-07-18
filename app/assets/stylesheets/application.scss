@@ -13,5 +13,6 @@
  */
 
 /* Custom bootstrap variables must be set or imported *before* bootstrap. */
-@import "bootstrap";
+
+// importing 'bootstrap' in each stylesheet separately, because in other case bootstrap variables don't work
 @import "shared";
