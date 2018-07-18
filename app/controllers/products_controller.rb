@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+    before_action :authenticate_admin!, except: [:show]
 
     layout "control_panels", :only => [ :edit, :create, :update ]
 

@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  #Devise
+  Rails.application.routes.draw do
+    devise_for :admins, controllers: {
+      sessions: 'admins/sessions'
+    }
+  end
   #Root
   root 'static_pages#about'
   #Static pages

@@ -61,10 +61,11 @@
             <li class="nav-item py-1">
                 <%= link_to "История компании", history_path, class: "nav-link" %>
             </li>
-            <li class="nav-item py-1">
-                <%= link_to "Панель управления", manager_path, class: "nav-link" %>
-            </li>
-            
+            <% if admin_signed_in? %>
+                <li class="py-1">
+                    <%= link_to "Панель управления", manager_path, class: "btn btn-sm btn-primary" %>
+                </li>
+            <% end %>
         </ul>
     </nav>
 </header>

@@ -1,4 +1,5 @@
 class ControlPanelsController < ApplicationController
+    before_action :authenticate_admin!
     
     def about_panel
     end

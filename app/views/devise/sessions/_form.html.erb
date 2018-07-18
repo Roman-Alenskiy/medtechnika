@@ -1,0 +1,24 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      
+    <div class="form-group">
+        <%= f.label :username, 'Логин' %><br />
+        <%= f.text_field :username, autofocus: true, class: 'form-control', placeholder: "Введите логин" %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :password, 'Пароль' %><br />
+        <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: "Введите пароль" %>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+        <div class="form-group">
+            <div class="custom-control custom-checkbox">
+                <%= f.check_box :remember_me, class: 'custom-control-input' %>
+                <%= f.label :remember_me, 'Запомнить', class: 'custom-control-label' %>
+            </div>
+        </div>
+    <% end -%>
+
+    <%= f.submit 'Войти', class: 'btn btn-primary btn-block' %>
+
+<% end %>

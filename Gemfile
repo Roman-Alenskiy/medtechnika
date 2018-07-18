@@ -20,6 +20,9 @@ gem 'mini_magick', '~> 4.8.0'
 # WYSIWYG editor
 gem 'tinymce-rails', '~> 4.7'
 gem 'tinymce-rails-langs'
+# authentication system
+gem 'devise', '~> 4.4.3'
+gem 'devise-i18n'
 # jQuery for bootstrap
 gem 'jquery-rails', '~> 4.3.3'
 # Sprockets implementation for rails
