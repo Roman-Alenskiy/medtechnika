@@ -1,0 +1,53 @@
+<% provide(:title, "Заявка") %>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-3">
+        <% if @request.completed? %>
+            <div class="card-header card-header-red">
+        <% else %>
+            <div class="card-header card-header-green">
+        <% end %>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 425 425" style="enable-background:new 0 0 425 425;" xml:space="preserve" width="16" height="16">
+                    <g>
+                        <g>
+                            <path d="M385.333,17c0-9.35-7.65-17-17-17H56.667c-9.35,0-17,7.65-17,17v391c0,9.35,7.65,17,17,17h311.667c9.35,0,17-7.65,17-17    V17z M73.667,34h277.667v357H73.667V34z" fill="#000"/>
+                            <path d="M289,99.167H136c-9.35,0-17,7.65-17,17s7.65,17,17,17h153c9.35,0,17-7.65,17-17S298.35,99.167,289,99.167z" fill="#000"/>
+                            <path d="M289,189.833H136c-9.35,0-17,7.65-17,17s7.65,17,17,17h153c9.35,0,17-7.65,17-17S298.35,189.833,289,189.833z" fill="#000"/>
+                            <path d="M289,286.167H136c-9.35,0-17,7.65-17,17s7.65,17,17,17h153c9.35,0,17-7.65,17-17S298.35,286.167,289,286.167z" fill="#000"/>
+                        </g>
+                    </g>
+                </svg>
+                Заявка №<%= @request.id %>
+            </div>
+            <div class="card-body">
+                <div class="container">
+                    <div class="row mb-3">
+                        <div class="col-md-8">
+                            <% if @request.completed? %>
+                                <%= link_to "Пометить как активную", {controller: 'online_requests', action: 'uncompleted', id: @request.id}, method: :post, class: 'btn btn-sm btn-success mb-1' %>
+                            <% else %>
+                                <%= link_to "Пометить как завршенную", {controller: 'online_requests', action: 'completed', id: @request.id}, method: :post, class: 'btn btn-sm btn-warning mb-1' %>
+                            <% end %>
+                            <%= link_to "Удалить", @request, method: :delete, data: {confirm: "Вы уверены?"}, class: 'btn btn-sm btn-danger mb-1' %>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h4><%= @request.subject %></h4>
+                            <p class="lead"><%= @request.message %></p>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Контакты отправителя:</h5>
+                            <ul>
+                                <li><strong>Имя:</strong> <%= @request.customer_name %></li>
+                                <li><strong>Email:</strong> <%= link_to @request.customer_email, "mailto:#{@request.customer_email}", target: '_blank' %></li>
+                                <li><strong>Телефон:</strong><%= " не указан" if @request.customer_phone_number.nil? %> <%= @request.customer_phone_number %></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

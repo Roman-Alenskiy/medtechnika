@@ -6,6 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Admin.create!(username: 'manager')
+Admin.find(1).update_attribute(:password, 'foobar')
+
+OnlineRequest.create!(
+    customer_name: 'Роман',
+    customer_email: 'r.alenskiy@mail.ru',
+    customer_phone_number: '89811129663',
+    subject: 'Уточнение наличия',
+    message: 'Здравствуйте! Хотелось бы уточнить наличие тонометра автоматического B.Well PRO-33 (М). Если в наличии отсутствует, то можно ли будет заказать?'
+)
+
+OnlineRequest.create!(
+    customer_name: 'Тест',
+    customer_email: 'test@example.com',
+    subject: 'Тест',
+    message: 'Некий текст...'
+)
+
 Category.create!(name: "Тонометры")
 Category.create!(name: "Аксессуары к тонометрам")
 Category.create!(name: "Ингаляторы")

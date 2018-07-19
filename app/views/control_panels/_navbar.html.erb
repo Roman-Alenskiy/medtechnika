@@ -1,86 +1,175 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <%= link_to "Панель управления", manager_path, class:"navbar-brand" %>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-            <li class="nav-item nav-item-first" data-toggle="tooltip" data-placement="right">
-                <%=link_to manager_path, class: "nav-link" do %>
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve" fill="#95a5a6" width="16" height="16">
-                        <path d="M25,2C12.297,2,2,12.297,2,25s10.297,23,23,23s23-10.297,23-23S37.703,2,25,2z M25,11c1.657,0,3,1.343,3,3s-1.343,3-3,3  s-3-1.343-3-3S23.343,11,25,11z M29,38h-2h-4h-2v-2h2V23h-2v-2h2h4v2v13h2V38z" fill="#95a5a6"/>
-                    </svg>
-                    <i class="fa fa-fw fa-dashboard"></i>
-                    <span class="nav-link-text">О панели</span>
-                <% end %>
-            </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                <%=link_to manager_categories_path, class: "nav-link" do %>
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 60.123 60.123" style="enable-background:new 0 0 60.123 60.123;" xml:space="preserve" width="16" height="16">
-                    <g>
-                        <path d="M57.124,51.893H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,51.893,57.124,51.893z" fill="#95a5a6"/>
-                        <path d="M57.124,33.062H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3   C60.124,31.719,58.781,33.062,57.124,33.062z" fill="#95a5a6"/>
-                        <path d="M57.124,14.231H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,14.231,57.124,14.231z" fill="#95a5a6"/>
-                        <circle cx="4.029" cy="11.463" r="4.029" fill="#95a5a6"/>
-                        <circle cx="4.029" cy="30.062" r="4.029" fill="#95a5a6"/>
-                        <circle cx="4.029" cy="48.661" r="4.029" fill="#95a5a6"/>
-                    </g>
-                </svg>
-                    <span class="nav-link-text">Категории</span>
-                <% end %>
-            </li>
-            
-            <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 260.293 260.293" style="enable-background:new 0 0 260.293 260.293;" xml:space="preserve" width="16" height="16">
-                        <g>
-                            <path d="M258.727,57.459c-1.42-1.837-3.612-2.913-5.934-2.913H62.004l-8.333-32.055c-0.859-3.306-3.843-5.613-7.259-5.613H7.5   c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h33.112l8.333,32.055c0,0.001,0,0.001,0.001,0.002l29.381,112.969   c0.859,3.305,3.843,5.612,7.258,5.612h137.822c3.415,0,6.399-2.307,7.258-5.612l29.385-112.971   C260.636,61.687,260.147,59.295,258.727,57.459z M117.877,167.517H91.385l-5.892-22.652h32.384V167.517z M117.877,129.864H81.592   l-5.895-22.667h42.18V129.864z M117.877,92.197H71.795l-5.891-22.651h51.973V92.197z M176.119,167.517h-43.242v-22.652h43.242   V167.517z M176.119,129.864h-43.242v-22.667h43.242V129.864z M176.119,92.197h-43.242V69.546h43.242V92.197z M217.609,167.517   h-26.49v-22.652h32.382L217.609,167.517z M227.403,129.864h-36.284v-22.667h42.18L227.403,129.864z M237.201,92.197h-46.081V69.546   h51.974L237.201,92.197z" fill="#95a5a6"/>
-                            <path d="M105.482,188.62c-15.106,0-27.396,12.29-27.396,27.395c0,15.108,12.29,27.4,27.396,27.4   c15.105,0,27.395-12.292,27.395-27.4C132.877,200.91,120.588,188.62,105.482,188.62z M105.482,228.415   c-6.835,0-12.396-5.563-12.396-12.4c0-6.835,5.561-12.395,12.396-12.395c6.834,0,12.395,5.561,12.395,12.395   C117.877,222.853,112.317,228.415,105.482,228.415z" fill="#95a5a6"/>
-                            <path d="M203.512,188.62c-15.104,0-27.392,12.29-27.392,27.395c0,15.108,12.288,27.4,27.392,27.4   c15.107,0,27.396-12.292,27.396-27.4C230.908,200.91,218.618,188.62,203.512,188.62z M203.512,228.415   c-6.833,0-12.392-5.563-12.392-12.4c0-6.835,5.559-12.395,12.392-12.395c6.836,0,12.396,5.561,12.396,12.395   C215.908,222.853,210.347,228.415,203.512,228.415z" fill="#95a5a6"/>
-                        </g>
-                    </svg>
-                    <span class="nav-link-text">Продукция</span>
-                </a>
-                <ul class="sidenav-second-level collapse" id="collapseComponents">
-                    <li>
-                        <%= link_to "Новый товар", manager_products_new_path %>
-                    </li>
-                    <li>
-                        <%= link_to "Список товаров", manager_products_path %>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <%= link_to about_path, class: "nav-link" do %>
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="16" height="16" viewBox="0 0 460.298 460.297" style="enable-background:new 0 0 460.298 460.297;" xml:space="preserve">
-                        <g>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                <li class="nav-item nav-item-first" data-toggle="tooltip" data-placement="right">
+                    <%=link_to manager_path, class: "nav-link" do %>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1"
+                            x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve"
+                            fill="#95a5a6" width="16" height="16">
+                            <path d="M25,2C12.297,2,2,12.297,2,25s10.297,23,23,23s23-10.297,23-23S37.703,2,25,2z M25,11c1.657,0,3,1.343,3,3s-1.343,3-3,3  s-3-1.343-3-3S23.343,11,25,11z M29,38h-2h-4h-2v-2h2V23h-2v-2h2h4v2v13h2V38z"
+                                fill="#95a5a6" />
+                        </svg>
+                        <i class="fa fa-fw fa-dashboard"></i>
+                        <span class="nav-link-text">О панели</span>
+                        <% end %>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                    <%=link_to manager_categories_path, class: "nav-link" do %>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                            x="0px" y="0px" viewBox="0 0 60.123 60.123" style="enable-background:new 0 0 60.123 60.123;" xml:space="preserve"
+                            width="16" height="16">
                             <g>
-                                <path d="M230.149,120.939L65.986,256.274c0,0.191-0.048,0.472-0.144,0.855c-0.094,0.38-0.144,0.656-0.144,0.852v137.041    c0,4.948,1.809,9.236,5.426,12.847c3.616,3.613,7.898,5.431,12.847,5.431h109.63V303.664h73.097v109.64h109.629    c4.948,0,9.236-1.814,12.847-5.435c3.617-3.607,5.432-7.898,5.432-12.847V257.981c0-0.76-0.104-1.334-0.288-1.707L230.149,120.939    z" fill="#95a5a6"/>
-                                <path d="M457.122,225.438L394.6,173.476V56.989c0-2.663-0.856-4.853-2.574-6.567c-1.704-1.712-3.894-2.568-6.563-2.568h-54.816    c-2.666,0-4.855,0.856-6.57,2.568c-1.711,1.714-2.566,3.905-2.566,6.567v55.673l-69.662-58.245    c-6.084-4.949-13.318-7.423-21.694-7.423c-8.375,0-15.608,2.474-21.698,7.423L3.172,225.438c-1.903,1.52-2.946,3.566-3.14,6.136    c-0.193,2.568,0.472,4.811,1.997,6.713l17.701,21.128c1.525,1.712,3.521,2.759,5.996,3.142c2.285,0.192,4.57-0.476,6.855-1.998    L230.149,95.817l197.57,164.741c1.526,1.328,3.521,1.991,5.996,1.991h0.858c2.471-0.376,4.463-1.43,5.996-3.138l17.703-21.125    c1.522-1.906,2.189-4.145,1.991-6.716C460.068,229.007,459.021,226.961,457.122,225.438z" fill="#95a5a6"/>
+                                <path d="M57.124,51.893H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,51.893,57.124,51.893z" fill="#95a5a6"
+                                />
+                                <path d="M57.124,33.062H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3   C60.124,31.719,58.781,33.062,57.124,33.062z"
+                                    fill="#95a5a6" />
+                                <path d="M57.124,14.231H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,14.231,57.124,14.231z" fill="#95a5a6"
+                                />
+                                <circle cx="4.029" cy="11.463" r="4.029" fill="#95a5a6" />
+                                <circle cx="4.029" cy="30.062" r="4.029" fill="#95a5a6" />
+                                <circle cx="4.029" cy="48.661" r="4.029" fill="#95a5a6" />
                             </g>
-                        </g>
-                    </svg>
-                    Вернуться на сайт
-                <% end %>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="modal" data-target="#logoutModal">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve" width="16" height="16">
-                        <g>
+                        </svg>
+                        <span class="nav-link-text">Категории</span>
+                        <% end %>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                            x="0px" y="0px" viewBox="0 0 260.293 260.293" style="enable-background:new 0 0 260.293 260.293;"
+                            xml:space="preserve" width="16" height="16">
+                            <g>
+                                <path d="M258.727,57.459c-1.42-1.837-3.612-2.913-5.934-2.913H62.004l-8.333-32.055c-0.859-3.306-3.843-5.613-7.259-5.613H7.5   c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h33.112l8.333,32.055c0,0.001,0,0.001,0.001,0.002l29.381,112.969   c0.859,3.305,3.843,5.612,7.258,5.612h137.822c3.415,0,6.399-2.307,7.258-5.612l29.385-112.971   C260.636,61.687,260.147,59.295,258.727,57.459z M117.877,167.517H91.385l-5.892-22.652h32.384V167.517z M117.877,129.864H81.592   l-5.895-22.667h42.18V129.864z M117.877,92.197H71.795l-5.891-22.651h51.973V92.197z M176.119,167.517h-43.242v-22.652h43.242   V167.517z M176.119,129.864h-43.242v-22.667h43.242V129.864z M176.119,92.197h-43.242V69.546h43.242V92.197z M217.609,167.517   h-26.49v-22.652h32.382L217.609,167.517z M227.403,129.864h-36.284v-22.667h42.18L227.403,129.864z M237.201,92.197h-46.081V69.546   h51.974L237.201,92.197z"
+                                    fill="#95a5a6" />
+                                <path d="M105.482,188.62c-15.106,0-27.396,12.29-27.396,27.395c0,15.108,12.29,27.4,27.396,27.4   c15.105,0,27.395-12.292,27.395-27.4C132.877,200.91,120.588,188.62,105.482,188.62z M105.482,228.415   c-6.835,0-12.396-5.563-12.396-12.4c0-6.835,5.561-12.395,12.396-12.395c6.834,0,12.395,5.561,12.395,12.395   C117.877,222.853,112.317,228.415,105.482,228.415z"
+                                    fill="#95a5a6" />
+                                <path d="M203.512,188.62c-15.104,0-27.392,12.29-27.392,27.395c0,15.108,12.288,27.4,27.392,27.4   c15.107,0,27.396-12.292,27.396-27.4C230.908,200.91,218.618,188.62,203.512,188.62z M203.512,228.415   c-6.833,0-12.392-5.563-12.392-12.4c0-6.835,5.559-12.395,12.392-12.395c6.836,0,12.396,5.561,12.396,12.395   C215.908,222.853,210.347,228.415,203.512,228.415z"
+                                    fill="#95a5a6" />
+                            </g>
+                        </svg>
+                        <span class="nav-link-text">Продукция</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseComponents">
+                        <li>
+                            <%= link_to "Новый товар", manager_products_new_path %>
+                        </li>
+                        <li>
+                            <%= link_to "Список товаров", manager_products_path %>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                    <%= link_to manager_requests_path, class: 'nav-link' do  %>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 425 425" style="enable-background:new 0 0 425 425;" xml:space="preserve" width="16" height="16">
                             <g>
                                 <g>
-                                    <path d="M341.333,0H42.667C19.093,0,0,19.093,0,42.667V128h42.667V42.667h298.667v298.667H42.667V256H0v85.333     C0,364.907,19.093,384,42.667,384h298.667C364.907,384,384,364.907,384,341.333V42.667C384,19.093,364.907,0,341.333,0z" fill="#95a5a6"/>
-                                    <polygon points="151.147,268.48 181.333,298.667 288,192 181.333,85.333 151.147,115.52 206.293,170.667 0,170.667 0,213.333      206.293,213.333    " fill="#95a5a6"/>
+                                    <path d="M385.333,17c0-9.35-7.65-17-17-17H56.667c-9.35,0-17,7.65-17,17v391c0,9.35,7.65,17,17,17h311.667c9.35,0,17-7.65,17-17    V17z M73.667,34h277.667v357H73.667V34z" fill="#95a5a6"/>
+                                    <path d="M289,99.167H136c-9.35,0-17,7.65-17,17s7.65,17,17,17h153c9.35,0,17-7.65,17-17S298.35,99.167,289,99.167z" fill="#95a5a6"/>
+                                    <path d="M289,189.833H136c-9.35,0-17,7.65-17,17s7.65,17,17,17h153c9.35,0,17-7.65,17-17S298.35,189.833,289,189.833z" fill="#95a5a6"/>
+                                    <path d="M289,286.167H136c-9.35,0-17,7.65-17,17s7.65,17,17,17h153c9.35,0,17-7.65,17-17S298.35,286.167,289,286.167z" fill="#95a5a6"/>
                                 </g>
                             </g>
-                        </g>
-                    </svg>
-                    Выйти
-                </a>
-            </li>
-        </ul>
-    </div>
+                        </svg>
+                    <span class="nav-link-text">Online-заявки</span>
+                    <% end %>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                            x="0px" y="0px" width="16" height="16" viewBox="0 0 511.626 511.626" style="enable-background:new 0 0 511.626 511.626;"
+                            xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M49.106,178.729c6.472,4.567,25.981,18.131,58.528,40.685c32.548,22.554,57.482,39.92,74.803,52.099    c1.903,1.335,5.946,4.237,12.131,8.71c6.186,4.476,11.326,8.093,15.416,10.852c4.093,2.758,9.041,5.852,14.849,9.277    c5.806,3.422,11.279,5.996,16.418,7.7c5.14,1.718,9.898,2.569,14.275,2.569h0.287h0.288c4.377,0,9.137-0.852,14.277-2.569    c5.137-1.704,10.615-4.281,16.416-7.7c5.804-3.429,10.752-6.52,14.845-9.277c4.093-2.759,9.229-6.376,15.417-10.852    c6.184-4.477,10.232-7.375,12.135-8.71c17.508-12.179,62.051-43.11,133.615-92.79c13.894-9.703,25.502-21.411,34.827-35.116    c9.332-13.699,13.993-28.07,13.993-43.105c0-12.564-4.523-23.319-13.565-32.264c-9.041-8.947-19.749-13.418-32.117-13.418H45.679    c-14.655,0-25.933,4.948-33.832,14.844C3.949,79.562,0,91.934,0,106.779c0,11.991,5.236,24.985,15.703,38.974    C26.169,159.743,37.307,170.736,49.106,178.729z"
+                                        fill="#95a5a6" />
+                                    <path d="M483.072,209.275c-62.424,42.251-109.824,75.087-142.177,98.501c-10.849,7.991-19.65,14.229-26.409,18.699    c-6.759,4.473-15.748,9.041-26.98,13.702c-11.228,4.668-21.692,6.995-31.401,6.995h-0.291h-0.287    c-9.707,0-20.177-2.327-31.405-6.995c-11.228-4.661-20.223-9.229-26.98-13.702c-6.755-4.47-15.559-10.708-26.407-18.699    c-25.697-18.842-72.995-51.68-141.896-98.501C17.987,202.047,8.375,193.762,0,184.437v226.685c0,12.57,4.471,23.319,13.418,32.265    c8.945,8.949,19.701,13.422,32.264,13.422h420.266c12.56,0,23.315-4.473,32.261-13.422c8.949-8.949,13.418-19.694,13.418-32.265    V184.437C503.441,193.569,493.927,201.854,483.072,209.275z"
+                                        fill="#95a5a6" />
+                                </g>
+                            </g>
+                        </svg>
+                        <% if @requests_not_completed.any?%>
+                            <span class="d-lg-none">
+                                <span class="badge badge-pill badge-primary"><%= @requests_not_completed.count %> </span>
+                            </span>
+                            <span class="indicator text-primary d-none d-lg-block">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="8" height="8" viewBox="0 0 438.533 438.533" style="enable-background:new 0 0 438.533 438.533;" xml:space="preserve">
+                                    <g>
+                                        <path d="M409.133,109.203c-19.608-33.592-46.205-60.189-79.798-79.796C295.736,9.801,259.058,0,219.273,0   c-39.781,0-76.47,9.801-110.063,29.407c-33.595,19.604-60.192,46.201-79.8,79.796C9.801,142.8,0,179.489,0,219.267   c0,39.78,9.804,76.463,29.407,110.062c19.607,33.592,46.204,60.189,79.799,79.798c33.597,19.605,70.283,29.407,110.063,29.407   s76.47-9.802,110.065-29.407c33.593-19.602,60.189-46.206,79.795-79.798c19.603-33.596,29.403-70.284,29.403-110.062   C438.533,179.485,428.732,142.795,409.133,109.203z" fill="#1b89ff"/>
+                                    </g>
+                                </svg>
+                            </span>
+                         <% end %>
+                    </a>
+                    <% if @requests_not_completed.any? and @requests_not_completed.count > 3 %>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-requests" aria-labelledby="messagesDropdown">
+                    <% else %>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
+                    <%end%>
+                            <h6 class="dropdown-header">Последние заявки:</h6>
+                            <div class="dropdown-divider"></div>
+                            <% if @requests_not_completed.any? %>
+                                <% @requests_not_completed.each do |request| %>
+                                    <%= link_to request, class: 'dropdown-item' do %>
+                                        <strong><%= request.customer_name %></strong>
+                                        <span class="small float-right text-muted"><%= request.created_at.strftime("%H:%M, %d.%m.%y") %></span>
+                                        <div class="dropdown-message small"><%= request.message %></div>
+                                    <% end %>
+                                    <div class="dropdown-divider"></div>
+                                <% end %>
+                            <% else %>
+                                <div class="dropdown-item">
+                                    <div class="dropdown-message small">Новых заявок нет!</div> 
+                                </div>
+                                <div class="dropdown-divider"></div>
+                            <% end %>
+                            <%= link_to "Посмотреть все заявки", manager_requests_path, class: "dropdown-item small" %>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <%= link_to about_path, class: "nav-link" do %>
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                            x="0px" y="0px" width="16" height="16" viewBox="0 0 460.298 460.297" style="enable-background:new 0 0 460.298 460.297;"
+                            xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M230.149,120.939L65.986,256.274c0,0.191-0.048,0.472-0.144,0.855c-0.094,0.38-0.144,0.656-0.144,0.852v137.041    c0,4.948,1.809,9.236,5.426,12.847c3.616,3.613,7.898,5.431,12.847,5.431h109.63V303.664h73.097v109.64h109.629    c4.948,0,9.236-1.814,12.847-5.435c3.617-3.607,5.432-7.898,5.432-12.847V257.981c0-0.76-0.104-1.334-0.288-1.707L230.149,120.939    z"
+                                        fill="#95a5a6" />
+                                    <path d="M457.122,225.438L394.6,173.476V56.989c0-2.663-0.856-4.853-2.574-6.567c-1.704-1.712-3.894-2.568-6.563-2.568h-54.816    c-2.666,0-4.855,0.856-6.57,2.568c-1.711,1.714-2.566,3.905-2.566,6.567v55.673l-69.662-58.245    c-6.084-4.949-13.318-7.423-21.694-7.423c-8.375,0-15.608,2.474-21.698,7.423L3.172,225.438c-1.903,1.52-2.946,3.566-3.14,6.136    c-0.193,2.568,0.472,4.811,1.997,6.713l17.701,21.128c1.525,1.712,3.521,2.759,5.996,3.142c2.285,0.192,4.57-0.476,6.855-1.998    L230.149,95.817l197.57,164.741c1.526,1.328,3.521,1.991,5.996,1.991h0.858c2.471-0.376,4.463-1.43,5.996-3.138l17.703-21.125    c1.522-1.906,2.189-4.145,1.991-6.716C460.068,229.007,459.021,226.961,457.122,225.438z"
+                                        fill="#95a5a6" />
+                                </g>
+                            </g>
+                        </svg>
+                        Вернуться на сайт
+                        <% end %>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#logoutModal">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                            x="0px" y="0px" viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve"
+                            width="16" height="16">
+                            <g>
+                                <g>
+                                    <g>
+                                        <path d="M341.333,0H42.667C19.093,0,0,19.093,0,42.667V128h42.667V42.667h298.667v298.667H42.667V256H0v85.333     C0,364.907,19.093,384,42.667,384h298.667C364.907,384,384,364.907,384,341.333V42.667C384,19.093,364.907,0,341.333,0z"
+                                            fill="#95a5a6" />
+                                        <polygon points="151.147,268.48 181.333,298.667 288,192 181.333,85.333 151.147,115.52 206.293,170.667 0,170.667 0,213.333      206.293,213.333    "
+                                            fill="#95a5a6" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        Выйти
+                    </a>
+                </li>
+            </ul>
+        </div>
 </nav>
