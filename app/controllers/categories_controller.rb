@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
     before_action :authenticate_admin!, except: [:show]
+    before_action :get_categories, only: [:show]
 
     layout "control_panels", :only => [ :edit, :create ]
     
