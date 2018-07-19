@@ -29,6 +29,17 @@ html, body {
     padding-top: 35px;
 }
 
+.contact-page {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 5px 20px rgba(79, 93, 155, 0.4);
+}
+
+
+.topic {
+    padding-bottom: 48px;
+}
+
 /* 
 * Header
 */
@@ -215,10 +226,6 @@ footer {
     width: 100%;
 }
 
-.topic {
-    padding-bottom: 75px;
-}
-
 .chapter {
     padding: 60px 0;
 }
@@ -260,12 +267,6 @@ footer {
 
 .nested-p {
     margin-left: 20px;
-}
-
-.address {
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 5px 20px rgba(79, 93, 155, 0.4);
 }
 
 #map {
@@ -355,4 +356,13 @@ footer {
 
 .product-price {
     text-align: end;
+}
+
+/*
+* Online requests
+*/
+
+.online-request {
+    padding: 70px 0;
+    background-color: #f1f1f1;
 }
