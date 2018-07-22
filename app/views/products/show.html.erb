@@ -13,8 +13,10 @@
                 </div>
     
                 <div class="col-md-7">
-                    <%= link_to "Редактировать", edit_product_path(@product), class: "btn btn-primary mb-3" %>
-                    <%= link_to "Удалить", @product,  method: :delete, data: {confirm: "Вы уверены?"}, class: "btn btn-primary mb-3" %>
+                    <% if admin_signed_in? %>
+                        <%= link_to "Редактировать", edit_product_path(@product), class: "btn btn-primary mb-3" %>
+                        <%= link_to "Удалить", @product,  method: :delete, data: {confirm: "Вы уверены?"}, class: "btn btn-primary mb-3" %>
+                    <% end %>
                     <h3 class="product-name"><%= @product.name %></h3>
                     <h4 class="product-price"><%= @product.price %> руб.</h4>
                 </div>
