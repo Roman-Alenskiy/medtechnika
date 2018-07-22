@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   get '/manager/products/new', to: 'control_panels#products_new'
   get '/manager/categories', to: 'control_panels#categories'
   get '/manager/requests', to: 'control_panels#requests'
+  get '/manager/edit', to: 'admin_edit#edit'
+  patch '/manager/edit', to: 'admin_edit#update'
   # Online requests
   post 'online_requests/:id/completed', to: 'online_requests#completed'
   post 'online_requests/:id/uncompleted', to: 'online_requests#uncompleted'

@@ -1,0 +1,28 @@
+<%= form_for(@admin, url: manager_edit_path) do |f| %>
+
+  <div class="form-group">
+        <%= f.label :username, 'Логин' %>
+        <%= f.text_field :username, autofocus: true, class: 'form-control' %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+    <small class="form-text text-muted">На этот email будут приходить уведомления о заявках</small>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password, 'Пароль' %>
+    <%= f.password_field :password, pattern: '[A-Za-z0-9]+', class: 'form-control' %>
+    <small class="form-text text-muted">Минимум 6 символов, латинские буквы и цифры</small>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation, 'Подтверждение пароля' %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Сохранить", class: 'btn btn-primary btn-block' %>
+  </div>
+<% end %>

@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Admin.create!(username: 'manager')
-Admin.find(1).update_attribute(:password, 'foobar')
+Admin.create!(username: 'manager', email: "r.alenskiy@mail.ru", password: 'foobar')
+# Admin.find(1).update_attribute(:password, 'foobar')
 
 OnlineRequest.create!(
     customer_name: 'Роман',
