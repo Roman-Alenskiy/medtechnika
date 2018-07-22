@@ -56,10 +56,10 @@
                         <tbody>
                             <% @products.each do |product| %>
                                 <tr>
-                                    <td><%= link_to product.name, product, target: '_blank', class: 'link' %></td>
-                                    <td><%= link_to product.category.name, product.category, target: "_blank", class: 'link' %></td>
-                                    <td><%= product.price.to_s + ' руб.'  if !product.price.nil? %></td>
-                                    <td>
+                                    <td class="w-60" ><%= link_to product.name, product, target: '_blank', class: 'link' %></td>
+                                    <td class="" ><%= link_to product.category.name, product.category, target: "_blank", class: 'link' %></td>
+                                    <td class="" ><%= product.price.to_s + ' руб.'  if !product.price.nil? %></td>
+                                    <td class="" >
                                         <%= link_to "Изменить", edit_product_path(product), class: 'btn btn-sm btn-info mb-1' %> | 
                                         <%= link_to "Удалить", product, method: :delete, data: {confirm: "Вы уверены?"}, class: 'btn btn-sm btn-danger mb-1' %>
                                     </td>

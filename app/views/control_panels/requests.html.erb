@@ -55,15 +55,15 @@
                         <tbody>
                             <% @requests_not_completed.each do |request| %>
                                 <tr>
-                                    <td><%= link_to request.subject, request, target: '_blank', class: 'link' %></td>
-                                    <td>
+                                    <td class="w-15" ><%= link_to request.subject, request, target: '_blank', class: 'link' %></td>
+                                    <td class="w-70" >
                                         <% if request.message.length > 200 %>
                                             <%= request.message[0..199] + "..."%>
                                         <% else %>
                                             <%= request.message %>
                                         <% end %>
                                     </td>
-                                    <td>
+                                    <td class="w-15" >
                                         <%= link_to "Пометить как завершенную", {controller: 'online_requests', action: 'completed', id: request.id}, method: :post, class: 'btn btn-sm btn-warning mb-1' %> 
                                         <%= link_to "Удалить", request, method: :delete, data: {confirm: "Вы уверены?"}, class: 'btn btn-sm btn-danger mb-1' %>
                                     </td>
@@ -132,9 +132,9 @@
                         <tbody>
                             <% @requests_completed.each do |request| %>
                                 <tr>
-                                    <td><%= link_to request.subject, request, target: '_blank', class: 'link' %></td>
-                                    <td><%= request.message%></td>
-                                    <td>
+                                    <td class="w-15" ><%= link_to request.subject, request, target: '_blank', class: 'link' %></td>
+                                    <td class="w-70" ><%= request.message%></td>
+                                    <td class="w-15" >
                                         <%= link_to "Пометить как активную", {controller: 'online_requests', action: 'uncompleted', id: request.id}, method: :post, class: 'btn btn-sm btn-success mb-1' %> 
                                         <%= link_to "Удалить", request, method: :delete, data: {confirm: "Вы уверены?"}, class: 'btn btn-sm btn-danger mb-1' %>
                                     </td>

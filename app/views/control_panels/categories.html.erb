@@ -74,7 +74,7 @@
                         <tbody>
                             <% @categories.each do |category| %>
                                 <tr>
-                                    <td><%= link_to category.name, category, target: "_blank", class: 'link' %></td>
+                                    <td class="w-60" ><%= link_to category.name, category, target: "_blank", class: 'link' %></td>
                                     <td>
                                         <%= link_to "Изменить", edit_category_path(category), remote: true, class: 'btn btn-sm btn-info mb-1' %> | 
                                         <%= link_to "Удалить", category, method: :delete, data: {confirm: "ВНИМАНИЕ! При удалении категории, относящиеся к ней товары будут также удалены!"}, class: 'btn btn-sm btn-danger mb-1' %>
