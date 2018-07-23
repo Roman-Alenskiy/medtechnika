@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    </head>
+    <body>
+        <h4>Заявка от:</h4>
+        <ul>
+            <li><strong>Имя:</strong> <%= @request.customer_name %></li>
+            <li><strong>Email:</strong> <%= link_to @request.customer_email, "mailto:#{@request.customer_email}", target: '_blank' %></li>
+            <li><strong>Телефон:</strong><%= " не указан" if @request.customer_phone_number.nil? %> <%= @request.customer_phone_number %></li>
+        </ul>
+        <h4>Тема заявки:</h4>
+        <p><%= @request.subject %></p>
+        <h4>Сообщение:</h4>
+        <p><%= @request.message %></p>
+    </body>
+</html>

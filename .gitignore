@@ -24,3 +24,6 @@
 
 # Ignore uploaded images
 /public/uploads
+
+# Ignore .env file
+/.env

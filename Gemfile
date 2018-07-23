@@ -12,6 +12,8 @@ gem 'rails', '~> 5.1.6'
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+# Mailer
+gem 'mail', '~> 2.7'
 # Use bootstrap and sass for front-end
 gem 'bootstrap', '~> 4.1.1'
 # For image uploads
@@ -54,6 +56,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # For evironment variables 
+  gem 'dotenv-rails'
 end
 
 group :development do

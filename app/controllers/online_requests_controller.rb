@@ -16,6 +16,7 @@ class OnlineRequestsController < ApplicationController
     def create
         @request = OnlineRequest.new(request_params)
         if @request.save
+            send_notification_email
             flash[:success] = "Заявка успешно отправлена! Наш менеджер свяжется с Вами в ближайшее рабочее время."
             redirect_to new_online_request_path
         else
@@ -48,6 +49,11 @@ class OnlineRequestsController < ApplicationController
 
         def request_params
             params.require(:online_request).permit(:customer_name, :customer_email, :customer_phone_number, :subject, :message)
+        end
+
+        def send_notification_email
+            @admin_email = Admin.find(1).email
+            NotificationMailer.with(request: @request, admin_email: @admin_email).notification_email.deliver_now
         end
 
 end
