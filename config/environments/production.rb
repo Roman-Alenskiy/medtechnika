@@ -68,13 +68,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :tls => true,
-    address: 'smtp.yandex.ru',
-    port: 465,
-    domain: 'yandex.ru',
+    address: 'smtp.mailgun.org',
+    port: 587,
     authentication: 'plain',
-    user_name: ENV['YANDEX_LOGIN'],
-    password: ENV['YANDEX_PASSWORD']
+    user_name: ENV['MAILGUN_LOGIN'],
+    password: ENV['MAILGUN_PASSWORD']
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
