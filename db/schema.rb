@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20180722172001) do
     t.datetime "updated_at", null: false
     t.string "email"
     t.index ["username"], name: "index_admins_on_username", unique: true
-    t.index [nil], name: "index_admins_on_reset_password_token", unique: true
   end
 
   create_table "categories", force: :cascade do |t|
