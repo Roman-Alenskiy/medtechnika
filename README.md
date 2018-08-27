@@ -1,4 +1,4 @@
-# medtech-karelia.ru
+# Medtechnika
 
 In this project I will realize rebuilding of web-site for company Medtechnika, Russia, Petrozavodsk city.
 
