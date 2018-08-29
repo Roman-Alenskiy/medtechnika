@@ -16,9 +16,11 @@
   <body class="bg-dark">
   
     <div class="container">
-        <div class="mt-5">
-        	<%= render 'layouts/flash' if flash.any? %>
-        </div>
+        <% if flash.any? %>
+          <div class="mt-2">
+            <%= render 'layouts/flash' %>
+          </div>
+        <% end %>
         <%= yield %>
     </div>
 
