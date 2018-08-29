@@ -27,7 +27,7 @@
                             <% if @request.completed? %>
                                 <%= link_to "Пометить как активную", {controller: 'online_requests', action: 'uncompleted', id: @request.id}, method: :post, class: 'btn btn-sm btn-success mb-1' %>
                             <% else %>
-                                <%= link_to "Пометить как завршенную", {controller: 'online_requests', action: 'completed', id: @request.id}, method: :post, class: 'btn btn-sm btn-warning mb-1' %>
+                                <%= link_to "Пометить как завершенную", {controller: 'online_requests', action: 'completed', id: @request.id}, method: :post, class: 'btn btn-sm btn-warning mb-1' %>
                             <% end %>
                             <%= link_to "Удалить", @request, method: :delete, data: {confirm: "Вы уверены?"}, class: 'btn btn-sm btn-danger mb-1' %>
                         </div>
