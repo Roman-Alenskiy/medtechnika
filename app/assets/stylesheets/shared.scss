@@ -2,14 +2,18 @@
 @import "bootstrap";
 
 .icon {
-    height: auto;
-    width: auto;
-  }
+  height: auto;
+  width: auto;
+}
 
 .alert-notice {
   @extend .alert-success;
- }
+}
 
- .alert-alert {
+.alert-alert {
   @extend .alert-danger;
- }
+}
+
+h5, strong {
+  font-weight: bold;
+}
